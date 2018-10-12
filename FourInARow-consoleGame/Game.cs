@@ -8,18 +8,37 @@ namespace FourInARow_consoleGame
 {
     class Game
     {
+        private Player _playerOne = new Player();
+        private Player _playerTwo = new Player();
         BoardGrid _grid = new BoardGrid(); //opretter instans af BoardGrid så det eksisterer i scope (giver adgang til metoder i klassen)
         public Game()
         {
+            SetPlayer(_playerOne);
+            SetPlayer(_playerTwo);
             GetGrid();
 
-            FindSpot(1);
+        }
 
-            GetGrid();
-
-            FindSpot(5);
-
-            GetGrid();
+        /// <summary>
+        /// promts user for input and changes player accordingly
+        /// </summary>
+        /// <param name="player">which player</param>
+        private void SetPlayer(Player player) //sætter player info ud fra input
+        {
+            Console.Write("Please choose a name: ");
+            player.Name = Console.ReadLine();
+            string input = "";
+            while (input != null && input.Length != 1)
+            {
+                Console.Write("Please choose a token: ");
+                input = Console.ReadLine();
+                if (input != null && input.Length != 1)
+                {
+                    Console.Write("Invalid, try again: ");
+                }
+            }
+            player.Token = Convert.ToChar(input);
+            Console.WriteLine($"{player.Name} [{player.Token}]");
         }
 
         /// <summary>
