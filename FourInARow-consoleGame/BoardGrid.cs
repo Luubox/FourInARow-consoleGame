@@ -8,7 +8,24 @@ namespace FourInARow_consoleGame
 {
     class BoardGrid
     {
-        char[,] _twoDimensionalArray = new char[6, 6];
+        public char[,] TwoDimensionalArray = new char[6, 6];
+        public int RowLength;
+        public int ColLength;
+
+        public BoardGrid()
+        {
+            RowLength = TwoDimensionalArray.GetLength(0);
+            ColLength = TwoDimensionalArray.GetLength(1);
+
+            for (int i = 0; i < RowLength; i++)
+            {
+                for (int j = 0; j < ColLength; j++)
+                {
+                    SetSingleValue(i,j,'o');
+                }
+            }
+
+        }
 
         /// <summary>
         /// get a singel value from our two dimensional array
@@ -18,7 +35,7 @@ namespace FourInARow_consoleGame
         /// <returns></returns>
         public char GetSingleValue(int x, int y)
         {
-            return _twoDimensionalArray[x, y];
+            return TwoDimensionalArray[x, y];
         }
 
         /// <summary>
@@ -28,23 +45,20 @@ namespace FourInARow_consoleGame
         /// <param name="y">y axis position</param>
         /// <param name="value">the char you want to set</param>
         /// <returns></returns>
-        public char SetSingleValue(int x, int y, char value)
+        public void SetSingleValue(int x, int y, char value)
         {
-            return _twoDimensionalArray[x, y] = value;
+            TwoDimensionalArray[x, y] = value;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            int rowLength = _twoDimensionalArray.GetLength(0);
-            int colLength = _twoDimensionalArray.GetLength(1);
 
-            for (int i = 0; i < rowLength; i++)
+            for (int i = 0; i < RowLength; i++)
             {
-                for (int j = 0; j < colLength; j++)
+                for (int j = 0; j < ColLength; j++)
                 {
-                    _twoDimensionalArray[i, j] = 'o';
-                    sb.Append($"{_twoDimensionalArray[i, j]} ");
+                    sb.Append($"{TwoDimensionalArray[i, j]} ");
                 }
                 sb.Append(Environment.NewLine.ToString());
             }

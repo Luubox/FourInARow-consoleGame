@@ -18,10 +18,7 @@ namespace FourInARow_consoleGame
              *
              */
             Game game = new Game();
-            
-            //TODO flyt
-            BoardGrid bg = new BoardGrid();
-            Console.WriteLine(bg);
+
         }
     }
 }
