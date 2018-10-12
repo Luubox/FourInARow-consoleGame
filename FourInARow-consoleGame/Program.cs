@@ -18,7 +18,6 @@ namespace FourInARow_consoleGame
              *
              */
             Game game = new Game();
-
         }
     }
 }
