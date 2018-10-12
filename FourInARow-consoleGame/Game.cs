@@ -22,6 +22,10 @@ namespace FourInARow_consoleGame
             GetGrid();
         }
 
+        /// <summary>
+        /// checks grid column for empty cell - uses SetSingleValue to change value
+        /// </summary>
+        /// <param name="col">Column choice</param>
         public void FindSpot(int col)
         {
             for (int i = _grid.ColLength - 1; i >= 0; i--)
@@ -34,6 +38,9 @@ namespace FourInARow_consoleGame
             }
         }
 
+        /// <summary>
+        /// Does what it says on the tin
+        /// </summary>
         public void GetGrid()
         {
             Console.WriteLine(_grid);
