@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FourInARow_consoleGame
 {
-    class FourInARow
+    class BoardGrid
     {
-        char[,] _twoDimensionalArray = new char[6,6];
+        char[,] _twoDimensionalArray = new char[6, 6];
 
         /// <summary>
         /// get a singel value from our two dimensional array
@@ -30,7 +30,11 @@ namespace FourInARow_consoleGame
         /// <returns></returns>
         public char SetSingleValue(int x, int y, char value)
         {
-             return _twoDimensionalArray[x, y] = value;
+            return _twoDimensionalArray[x, y] = value;
         }
+
+        StringBuilder _stringBuilder = new StringBuilder();
+
+
     }
 }
