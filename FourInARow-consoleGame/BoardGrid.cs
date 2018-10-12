@@ -33,8 +33,21 @@ namespace FourInARow_consoleGame
             return _twoDimensionalArray[x, y] = value;
         }
 
-        StringBuilder _stringBuilder = new StringBuilder();
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            int rowLength = _twoDimensionalArray.GetLength(0);
+            int colLength = _twoDimensionalArray.GetLength(1);
 
-
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+                    sb.Append($"{_twoDimensionalArray[i, j]} ");
+                }
+                sb.Append(Environment.NewLine + Environment.NewLine.ToString());
+            }
+            return sb.ToString();
+        }
     }
 }

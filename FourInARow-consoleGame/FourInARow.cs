@@ -8,5 +8,8 @@ namespace FourInARow_consoleGame
 {
     class FourInARow
     {
+        BoardGrid _board = new BoardGrid();
+
+        Console.WriteLine("test");
     }
 }
