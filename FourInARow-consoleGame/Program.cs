@@ -17,10 +17,11 @@ namespace FourInARow_consoleGame
              * - Use a two dimensional array
              *
              */
-
-            FourInARow game = new FourInARow();
+            Game game = new Game();
+            
+            //TODO flyt
+            BoardGrid bg = new BoardGrid();
+            Console.WriteLine(bg);
         }
-
-
     }
 }

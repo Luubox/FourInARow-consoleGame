@@ -43,9 +43,10 @@ namespace FourInARow_consoleGame
             {
                 for (int j = 0; j < colLength; j++)
                 {
+                    _twoDimensionalArray[i, j] = 'o';
                     sb.Append($"{_twoDimensionalArray[i, j]} ");
                 }
-                sb.Append(Environment.NewLine + Environment.NewLine.ToString());
+                sb.Append(Environment.NewLine.ToString());
             }
             return sb.ToString();
         }

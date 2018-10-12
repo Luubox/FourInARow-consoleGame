@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoardGrid.cs" />
-    <Compile Include="FourInARow.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace FourInARow_consoleGame
 {
-    class FourInARow
+    class Game
     {
-        BoardGrid _board = new BoardGrid();
+        BoardGrid _grid = new BoardGrid();
 
-        Console.WriteLine("test");
     }
 }
